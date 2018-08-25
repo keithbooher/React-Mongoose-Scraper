@@ -47,6 +47,12 @@ export default class SavedArticles extends Component {
                             <H1 className="text-center">Saved New York Times Articles</H1>
                             <hr style={{width: '60%'}}/>
                         </Jumbotron>
+
+                    </Col>
+                </Row>
+                    
+                <Row>
+                    
                         <Panel>
                             <PanelHeading>
                                 <H3>Saved Articles</H3>
@@ -54,22 +60,23 @@ export default class SavedArticles extends Component {
                             <PanelBody>
                                 { this.state.savedArticles.length > 0 ?
                                 (this.state.savedArticles.map((article, i) => (
-                                    <Article   
-                                        key={i}
-                                        title={article.title}
-                                        url={article.url}
-                                        summary={article.summary}
-                                        date={article.date}
-                                        type="Delete"
-                                        onClick={() => this.deleteArticle(article._id)}
-                                    />
+                                    <Col size="sm-5" offset="sm-1">      
+                                        <Article   
+                                            key={i}
+                                            title={article.title}
+                                            url={article.url}
+                                            summary={article.summary}
+                                            date={article.date}
+                                            type="Delete"
+                                            onClick={() => this.deleteArticle(article._id)}
+                                        />
+                                    </Col>
                                 )
                             )) : <H1>You have no saved articles.</H1>    
                             }
                             </PanelBody>
                         </Panel>
-                    </Col>
-                </Row>
+                </Row>  
             </Container>
         );
     };

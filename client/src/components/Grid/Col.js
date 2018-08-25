@@ -1,4 +1,6 @@
 import React from "react";
+import "./Col.css";
+
 
 export const Col = ({ size, offset, children }) => {
 
@@ -8,7 +10,7 @@ export const Col = ({ size, offset, children }) => {
                   : '';
   let classes = colSize + ' ' + colOffset
   return(
-    <div className={classes}>
+    <div className={`${classes} colMarg`} >
       {children}
     </div>
   )

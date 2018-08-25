@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Nav = () =>
 
-  <nav className="navbar navbar-dark bg-primary" style={{position: 'fixed', zIndex: 100, width: '100%'}}>
+  <nav className="navbar navbar-dark bg-danger" style={{position: 'fixed', zIndex: 100, width: '100%'}}>
     <Link className="navbar-brand" to="/">NYT Article Search</Link>
     <ul className="navbar-nav" style={{float: 'right'}}>
       <li className="nav-item" style={{margin: "5px"}}>

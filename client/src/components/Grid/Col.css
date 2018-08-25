@@ -1,0 +1,11 @@
+.colMarg {
+
+}
+
+.col-sm-5 {
+    margin-left: 0px;
+    margin-right: 0px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}

@@ -6,7 +6,7 @@ import { ListItem } from '../List'
 export const Article = props => (
 
   <div className="list-group" style={{margin: '30px 0'}}>
-    <a href={props.url} className="bg-dark list-group-item list-group-item-action flex-column align-items-start active" target="_blank">
+    <a href={props.url} className="bg-secondary text-white list-group-item list-group-item-action flex-column align-items-start active" target="_blank">
       <div className="d-flex w-100 justify-content-between">
         <h5 className="mb-1">{props.title}</h5>
         <small>{moment(props.date).format("dddd, MMMM Do YYYY, h:mm")}</small>
