@@ -20,16 +20,20 @@ export default class SavedArticles extends Component {
             .getArticles()
             .then(results => {
                 this.setState({savedArticles: results.data})
+                console.log(this.state.savedArticles)
             })
     };
 
     deleteArticle = id => {
+        // console.log(id);
         API
             .deleteArticle(id)
             .then(results => {
                 let savedArticles = this.state.savedArticles.filter(article => article._id !== id)
                 this.setState({savedArticles: savedArticles})
                 this.loadArticles();
+                console.log(this.state.savedArticles)
+                
             })
             .catch(err => console.log(err));
     };

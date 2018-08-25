@@ -21,7 +21,6 @@ module.exports = {
             .create(req.body)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err))
-            console.log('test controller')
     },
     update: (req, res) => {
         db.Article
@@ -33,6 +32,10 @@ module.exports = {
         db.Article
             .findById({ _id: req.params.id })
             .then(dbModel => dbModel.remove())
+            .then(dbModel => res.json(dbModel))
+            .then(res.status(200))            
             .catch(err => res.status(422).json(err))
+            console.log('res', res)
+            
     }
 };
